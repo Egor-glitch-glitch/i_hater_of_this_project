@@ -12,9 +12,15 @@ while True:
         else:
             pass
     if n =="pop":
-        a.pop(0)
+        if len(a) != 0:
+            a.pop(0)
+        else:
+            print("У тебя в галаве пуста error")
     if n == "front":
-        print(a[0])
+        if len(a) != 0:
+            print(a[0])
+        else:
+            print("У тебя в галаве пуста error")
     if n == "size":
         print(len(a))
     if n == "clear":
@@ -29,5 +35,7 @@ while True:
         break
     else:
         continue
-    
-print(a,c)
+print(f"Список символов:{a}")
+print("Список команд:")
+for i in c:
+    print(i)
